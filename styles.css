@@ -37,7 +37,7 @@ a {
 #navbutton {
     background-color:var(--grey-200);
     position:fixed;
-    right:10px;
+    left:10px;
     top:10px;
     border-radius:8px;
     color:var(--grey-800);
@@ -57,18 +57,31 @@ a {
 }
 
 #navigation {
-    width:100vw;
+    width:0vw;
     height:100vh;
     position:fixed;
     top:0;
     left:0;
+    overflow:hidden;
+    transition: width 2s;
+    background-color:var(--grey-800);
+}
+
+#navigation.foo {
+    width:100vw;
+    height:100vh;
 }
 
 .nav-parent {
     display: flex;
     flex-direction:column;
-    height:100%;
-    background-color:var(--grey-700);
+    height:100vh;
+    background-color:var(--grey-800);
+    display:none;
+}
+
+.nav-parent[style*='display: block']{
+    display: flex !important;
 }
 
 .nav-parent > a {
@@ -86,6 +99,7 @@ a {
 .nav-parent > a.current {
     color:var(--grey-200);
     cursor:default;
+    pointer-events: none;
 }
 
 .nav-parent > a.current:hover {
@@ -101,7 +115,7 @@ a {
     transition:0.3s all ease-in-out;
 }
 
-.return {
+#close {
     background-color:var(--accent-blue)!important;
     color:var(--grey-800)!important;
 }
@@ -158,7 +172,7 @@ a {
   
 .bottom-img { 
     grid-area: bottom-img;
-    background-image:url("banner-temp.png");
+    background-image:url("images/elliot1.png");
     background-size:cover;
     background-position:center;
 }
@@ -216,9 +230,10 @@ a {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-gap:8px;
-    width:70vw;
+    width:75vw;
     margin:auto;
     margin-top:80px;
+    margin-bottom:80px;
 }
 
 .about-grid > div {
@@ -246,7 +261,7 @@ a {
 .headerdesc {
     color:var(--grey-500);
     text-transform:uppercase;
-    margin-bottom:8px;
+    margin-bottom:24px;
 }
     
 .grid-header { 
@@ -277,6 +292,27 @@ a {
     grid-area: 3 / 6 / 4 / 11;
     background-color:var(--grey-900); 
     padding:24px;
+}
+
+.alter {
+    background-color:var(--grey-200);
+    color:var(--grey-800);
+    padding:24px 16px;
+    font-size:0.7rem;
+    font-weight:bold;
+    line-height:120%;
+    text-transform:uppercase;
+}
+
+.alter span {
+    color:var(--grey-200);
+}
+
+.about-grid .name {
+    font-size:1.2rem;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:16px;
 }
 .host { 
     grid-area: 4 / 1 / 5 / 3; 
@@ -375,6 +411,11 @@ a {
     flex-direction:row;
     align-items:space-between;
     justify-content:start;
+    gap:32px;
+}
+
+.knowledge-grid ul {
+    padding: 0;
 }
 
 .knowledge-grid > div {
@@ -387,3 +428,181 @@ a {
 
 .bg-faq { grid-area: 5 / 1 / 6 / 3; } 
 
+/** verses **/
+
+.inforow {
+    display:flex;
+    flex-direction:row;
+    gap:24px;
+}
+
+.versebox {
+    margin-bottom:60px;
+}
+
+.versebox h2 {
+    text-transform:uppercase;
+    font-size:2.5rem;
+    line-height:100%;
+    margin-bottom:6px;
+}
+
+.versesubtitle {
+    text-transform:uppercase;
+    font-weight:bold;
+    background-color:var(--grey-200);
+    color:var(--grey-800);
+    padding:3px 8px;
+    font-size:0.8rem;
+}
+
+.desc {
+    width:auto;
+
+}
+
+.desc subtitle {
+    background-color:var(--grey-200);
+    color:var(--grey-800);
+    padding:5px;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin:auto;
+    text-align:center;
+}
+
+.connections {
+    width:300px;
+    border-left:2px solid var(--grey-200);
+    padding:16px;
+    padding-right:0;
+    flex-shrink:0;
+    font-size:0.9rem;
+    line-height:140%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding-bottom:0;
+}
+
+.connections ul {
+    margin-bottom:0;
+}
+
+.connections h3 {
+    margin-bottom:0;
+    font-size:1.5rem;
+    background-color:var(--grey-200);
+    margin-left:-16px;
+    padding:16px;
+    padding-right:32px;
+    color:var(--grey-800);
+}
+
+.connections ul {
+    padding-left: 16px;
+}
+/*
+ CSS for the main interaction
+*/
+
+.tabset > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+  }
+  
+  .tabset .tab-panel {
+    display: none;
+  }
+  
+  .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+  .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+  .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+  .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+  .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+  }
+  
+  /*
+   Styling
+  */
+  
+  .tabset > label {
+    position: relative;
+    display: inline-block;
+    padding: 15px 45px;
+    border-bottom: 0;
+    cursor: pointer;
+    margin-right:0;
+    font-weight: 600;
+    border-bottom:2px solid var(--grey-200);
+    text-align:center;
+    text-transform:uppercase;
+  }
+
+  
+  input:focus-visible + label {
+    background-color:var(--grey-200);
+    color:var(--grey-800);
+  }
+  
+  .tabset > label:hover,
+  .tabset > input:focus + label,
+  .tabset > input:checked + label {
+    background-color:var(--grey-200);
+    color:var(--grey-800);
+  }
+  
+  .tabset > label:hover::after,
+  .tabset > input:focus + label::after,
+  .tabset > input:checked + label::after {
+    background-color:var(--grey-200);
+    color:var(--grey-800);
+  }
+  
+  .tab-panel {
+    padding: 30px 0;
+  }
+
+#warning {
+    width:70vw;
+    height:100vh;
+    margin:auto;
+    line-height:150%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+}
+
+
+.warn-title {
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:6.5rem;
+    letter-spacing:-10px;
+    margin-left:8px;
+    display:flex;
+    align-items:center;
+}
+
+.warn-desc {
+    margin-bottom:48px;
+}
+
+.warningbox a {
+    color:var(--grey-200);
+    font-weight:bold;
+    padding:10px 24px;
+    padding-top:12px;
+    margin:auto;
+    margin-top:40px;
+    font-size:1.5rem;
+    border:5px solid var(--grey-200);
+}
+
+.warningbox a:hover {
+    background-color:var(--grey-200);
+    color:var(--grey-800);
+}

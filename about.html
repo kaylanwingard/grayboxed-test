@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>GRAYBOXED</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         <div class="about-grid">
             <div class="grid-header">
                 <div class="headername">WHO IS ELLIOT ALDERSON?</div>
-                <div class="headerdesc">about subtitle goes here</div>
+                <div class="headerdesc">the thing about mirrors is that they don't show you an absolute truth.</div>
             </div>
             <div class="grid-img">
                 <img src="https://placehold.co/400">
@@ -85,12 +86,66 @@
                 (the more confident they are about reading people, the less right they
                 probably are).<br />
             </div>
-            <div class="host"> host</div>
-            <div class="mm"> mastermind</div>
-            <div class="pro"> protector</div>
-            <div class="per"> persecutor</div>
-            <div class="little"> little</div>
+            <div class="host alter"> 
+                <div class="name">HOST</div>
+                <span>IN CONTROL (POST-S4)</span>
+    
+                disappeared for the events of 2015. felt helpless in an uncaring
+                world after years of trauma; crushed by the forces of capitalism.
+                probably kinder than you'd expect; still dislikes people and
+                crowds, but less outright paranoid. in control post-series. coming
+                to terms with everything that happened.
+            </div>
+            <div class="mm alter">
+                <div class="name">MASTERMIND</div>
+                <span>IN CONTROL (S1-S4)</span>
+    
+                the instigator and main character of mr. robot, and the alter you're most likely to meet if your character met elliot over the events of the series. the mastermind was made to hold elliot's rage and to be an active force in an unbearable world. in control from october 2014 to the end of 2015. brilliant. troubled. relentless. 
+            </div>
+            <div class="pro alter">
+                <div class="name">PROTECTOR</div>
+                <span>INTERMITTENT</span>
+    
+                the first alter to exist. mostly bark and less bite than the mastermind, but dangerous in his own right. will protect the system. will hurt other people to protect the system. has the most self-preservation and a paternal instinct towards the other alters and the people they care about. honestly kind of an asshole. 
+            </div>
+            <div class="per alter">
+                <div class="name">PERSECUTOR</div>
+                <span>UNAVAILABLE</span>
+    
+                modeled after elliot's mother. holds most of the negative and abusive messages that were imparted to him throughout his childhood. her function is to, in short, teach them how to "behave" in order to avoid upsetting the abuser (i.e. elliot's mother, in this case) in the future. will not be written on this blog. 
+            </div>
+            <div class="little alter">
+                <div class="name">LITTLE</div>
+                <span>UNAVAILABLE</span>
+    
+                created to partition off much of the abuse elliot suffered. protected very deeply by the rest of the system and very rarely if ever fronts. will not be written on this blog. please don't ask. 
+            </div>
         </div> 
     </div>
+    <div id="navigation">
+        <div class="nav-parent">
+            <a href="/rules.html">
+                <div class="nav-title"><i class="ph-thin ph-map-trifold"></i> rules</div>
+                <div class="nav-desc">C://users/sepi0l/README.md</div>
+            </a>
+            <a href="/about.html" class="current">
+                <div class="nav-title"><i class="ph-thin ph-identification-card"></i> about</div>
+                <div class="nav-desc">C://users/sepi0l/system/</div>
+            </a>
+            <a href="/background.html">
+                <div class="nav-title"><i class="ph-thin ph-info"></i> background</div>
+                <div class="nav-desc">C://users/sepi0l/docs/bg.doc</div>
+            </a>
+            <a href="/verses.html">
+                <div class="nav-title"><i class="ph-thin ph-globe-stand"></i> arcs & verses</div>
+                <div class="nav-desc">C://users/sepi0l/docs/worlds.xlsx</div>
+            </a>
+            <a id="close">
+                <div class="nav-title"><i class="ph-thin ph-door-open"></i> exit navigation</div>
+                <div class="nav-desc">C://users/sepi0l/...</div>
+            </a>
+        </div>        
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>

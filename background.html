@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>GRAYBOXED</title>
 </head>
 <body>
@@ -13,10 +14,10 @@
         <div class="bg-grid">
             <div class="bg-header">
                 <div class="headername">BACKGROUND</div>
-                <div class="headerdesc">about subtitle goes here</div>
+                <div class="headerdesc">most of my life around then is empty space.</div>
             </div>
             <div class="bg-img">
-                <img src="https://placehold.co/400x600">
+                <img src="images/elliot2.png">
             </div>
             <div class="bg-world"> 
                 <h2>SO, WHAT'S THE WORLD LOOK LIKE?</h2>
@@ -42,30 +43,29 @@
                 <h2>WHAT WOULD MY CHARACTER KNOW?</h2>
                 <div class="knowledge-grid">
                     <div>
-                        <h3>THE PUBLIC KNOWS:</h3>
+                        <h3>THE PUBLIC KNOWS</h3>
                         <ul>
-                            <li>bullet one</li>
-                            <li>bullet two</li>
-                            <li>bullet three</li>
-                            <li>bullet four</li>
+                            <li>elliot alderson was associated with stopping the washington township nuclear plant from melting down over christmas 2015.</li>
+                            <li>everyone else in the power plant died, including the leader of the infamous deus group, a collection of the hundred or so richest people in the world.</li>
+                            <li>fsociety, a hacker collective, outed the deus group. they were also responsible for 5/9 in early 2015, which encrypted most debt records and tanked the economy. they later fixed that.</li>
+                            <li>they're also associated with blowing up 71 buildings and killing thousands of people. there's a lot of talk about that one.</li>
                         </ul>
                     </div>
                     <div>
-                        <h3>HACKERS KNOW:</h3>
+                        <h3>HACKERS KNOW</h3>
                         <ul>
-                            <li>bullet one</li>
-                            <li>bullet two</li>
-                            <li>bullet three</li>
-                            <li>bullet four</li>
+                            <li>sepi0l is an infamous and nigh-invisible hacker who disappeared for most of 2015 and then resurfaced in late 2016.</li>
+                            <li>no one really knows anything about the original members of fsociety. there was a secondary group that popped up after 5/9, but the footprint wasn't the same.</li>
+                            <li>lots of rumors about fsociety in general. people say they were a part of it, but that might not be true. there's plenty of groups who popped up trying to be their successors, too.</li>
+                            <li>in terms of work, sepi0l spends a lot of time on irc boards and has written some fucking unhinged malware. they love open source projects and they hate suits, whether government or business.</li>
                         </ul>
                     </div>
                     <div>
-                        <h3>LAW ENFORCEMENT KNOWS:</h3>
+                        <h3>LAW ENFORCEMENT KNOWS</h3>
                         <ul>
-                            <li>bullet one</li>
-                            <li>bullet two</li>
-                            <li>bullet three</li>
-                            <li>bullet four</li>
+                            <li>elliot alderson has a criminal record. he took a deal to not be tried for property damage, and later went to jail for computer hacking and stealing a guy's dog.</li>
+                            <li>elliot alderson was investigated by the fbi in connection to fsociety, 5/9, and the 71 buildings. he wasn't charged. a lot of it seems to rest at the feet of now-deceased e corp cto tyrell wellick.</li>
+                            <li>if you're at a high enough clearance level, you know more about the details. elliot's sister was briefly arrested in connection to fsociety. it appears that a lot of what happened was related to the dark army, a criminal hacking syndicate used by the deus group as their muscle.</li>
                         </ul>
                     </div>
                 </div>
@@ -80,5 +80,30 @@
         
         <div class="textcon"></div>
     </div>
+    <div id="navigation">
+        <div class="nav-parent">
+            <a href="/rules.html">
+                <div class="nav-title"><i class="ph-thin ph-map-trifold"></i> rules</div>
+                <div class="nav-desc">C://users/sepi0l/README.md</div>
+            </a>
+            <a href="/about.html">
+                <div class="nav-title"><i class="ph-thin ph-identification-card"></i> about</div>
+                <div class="nav-desc">C://users/sepi0l/system/</div>
+            </a>
+            <a href="/background.html" class="current">
+                <div class="nav-title"><i class="ph-thin ph-info"></i> background</div>
+                <div class="nav-desc">C://users/sepi0l/docs/bg.doc</div>
+            </a>
+            <a href="/verses.html">
+                <div class="nav-title"><i class="ph-thin ph-globe-stand"></i> arcs & verses</div>
+                <div class="nav-desc">C://users/sepi0l/docs/worlds.xlsx</div>
+            </a>
+            <a id="close">
+                <div class="nav-title"><i class="ph-thin ph-door-open"></i> exit navigation</div>
+                <div class="nav-desc">C://users/sepi0l/...</div>
+            </a>
+        </div>        
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
