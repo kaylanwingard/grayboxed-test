@@ -490,6 +490,10 @@ a {
     padding-bottom:0;
 }
 
+.link:hover h3 {
+    background-color:var(--accent-blue);
+}   
+
 .connections ul {
     margin-bottom:0;
 }
